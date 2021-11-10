@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_Activity">
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="89dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labeluser"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_labeluser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="User"
+        app:layout_constraintStart_toEndOf="@+id/iv_user"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_labeluser"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labeluser"
+        tools:text="Manolito Perez" />
+
+    <TextView
+        android:id="@+id/tv_labelLicense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="License"
+        app:layout_constraintStart_toStartOf="@+id/iv_user"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+
+    <TextView
+        android:id="@+id/tv_license"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_labelLicense"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelLicense"
+        tools:text="Estudiante" />
+
+    <TextView
+        android:id="@+id/tv_labelTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tags"
+        app:layout_constraintStart_toStartOf="@+id/tv_license"
+        app:layout_constraintTop_toBottomOf="@+id/tv_license" />
+
+    <TextView
+        android:id="@+id/tv_Tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_labelTags"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelTags"
+        tools:text="Android, Kotlin, Ejercicio" />
+
+    <TextView
+        android:id="@+id/tv_labelLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Language"
+        app:layout_constraintStart_toStartOf="@+id/tv_Tags"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Tags" />
+
+    <TextView
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_labelLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelLanguage"
+        tools:text="Kotlin, Java" />
+</androidx.constraintlayout.widget.ConstraintLayout>
