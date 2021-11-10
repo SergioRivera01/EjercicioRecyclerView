@@ -5,11 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class RepositoryAdapter(private val repositories: MutableList<Repository>,
-                                 val onClickListener: (Repository) -> Unit): RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>(){
+class RepositoryAdapter(private val repositories: MutableList<repository>,
+                                 val onClickListener: (repository) -> Unit): RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>(){
 
 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context)
@@ -17,7 +18,7 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryVie
             return RepositoryViewHolder(view)
     }
      override fun onBindViewHolder(holder: RepositoryViewHolder, position: Int) {
-        val repository : Repository = repositories[position]
+        val repository : repository = repositories[position]
 
         holder.tv_name.text = repository.name
         holder.tv_tags.text = repository.owner
@@ -25,6 +26,7 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryVie
 
         holder.itemView.setOnClickListener{
             onClickListener(repository)
+
         }
     }
 

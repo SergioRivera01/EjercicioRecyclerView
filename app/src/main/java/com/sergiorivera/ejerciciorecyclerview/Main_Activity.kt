@@ -1,16 +1,15 @@
 package com.sergiorivera.ejerciciorecyclerview
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import org.json.JSONObject
 
-class MainActivity : AppCompatActivity() {
+
+class Main_Activity : AppCompatActivity() {
     private lateinit var adapter: RepositoryAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         val results = gson.fromJson(RecyclerFakeData.repositoriesJson, Array<ResultResponse>::class.java)
 
         repositories.addAll(results.repositories.toRespository())
-        results.repositories.forEach { RepositoryResponse ->
-           repositories.add(RepositoryResponse.toRespository())
+        results.repositories.forEach { userResponse ->
+            repositories.add(userResponse.toRespository())
         }
 
         adapter = RepositoryAdapter(repositories) { repository ->
@@ -43,3 +42,4 @@ class MainActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
 }
+

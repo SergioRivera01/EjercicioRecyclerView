@@ -7,7 +7,7 @@ data class repository(
     val image : String? = null
 )
 
-fun RepositoryResponse.toRespository():repository{
+fun RepositoryResponse.toRepository():repository{
     return repository(
     this.id,
     this.name,
@@ -15,5 +15,5 @@ fun RepositoryResponse.toRespository():repository{
 }
 
 fun List<RepositoryResponse>.toRespository(): List<repository>{
-    return this.map { it.toRespository() }
+    return this.map { it.toRepository() }
 }
